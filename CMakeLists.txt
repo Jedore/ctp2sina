@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.8)
+
+add_subdirectory(6.3.15)
+add_subdirectory(6.3.19)
+add_subdirectory(6.5.1)
+add_subdirectory(6.6.1)
+add_subdirectory(6.6.7)
+add_subdirectory(6.6.9)
+add_subdirectory(6.7.0)
+add_subdirectory(6.7.1)
+add_subdirectory(6.7.2)
+add_subdirectory(6.7.7)
