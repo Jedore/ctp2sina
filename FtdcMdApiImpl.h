@@ -259,7 +259,7 @@ public:
 	///@remark 
 	virtual int UnSubscribeForQuoteRsp(char* ppInstrumentID[], int nCount) { return -3; }
 
-#if defined(V6_3_19) || defined(V6_5_1) || defined(V6_6_1_P1) || defined(V6_6_7)
+#if defined(V6_3_19) || defined(V6_5_1) || defined(V6_6_1_P1) || defined(V6_6_7) || defined(V6_6_9) || defined(V6_7_0) || defined(V6_7_1) || defined(V6_7_2) || defined(V6_7_7)
 	///请求查询组播合约
 	virtual int ReqQryMulticastInstrument(CThostFtdcQryMulticastInstrumentField *pQryMulticastInstrument, int nRequestID) { return -3; }
 #endif
