@@ -16,6 +16,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   add_definitions(-D ISLIB -D LIB_MD_API_EXPORT -D V6_7_0)
 else()
   add_compile_options(-std=c++11 -pthread)
+  add_definitions(-D V6_7_0)
 endif()
 
 include_directories(${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/.. ${boost_include})
