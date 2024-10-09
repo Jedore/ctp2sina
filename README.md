@@ -1,44 +1,46 @@
 # ctp2sina
 
-**ÑÏÖØ²Î¿¼ https://github.com/openctp/openctp/tree/master/ctp2Sina**
+ç¼–è¯‘å¤šä¸ªCTPç‰ˆæœ¬ä»¥æ¥å…¥æ–°æµªè¡Œæƒ…ï¼ˆä½¿ç”¨å‚è€ƒ[openctp-ctp-channels](https://github.com/Jedore/openctp-ctp-channels)ï¼‰
 
-## ×¼±¸
+> ä¸¥é‡å‚è€ƒ https://github.com/openctp/openctp/blob/master/ctp2Sina
+
+## å‡†å¤‡
 
 - Window 10
     - VS 2022
     - Boost 1.78
 - Debian 12
 
-## Win 10 °²×° Boost 1.78
+## Win 10 å®‰è£… Boost 1.78
 
-1. ÏÂÔØ
+1. ä¸‹è½½
 
-   1.78 ÒÔÇ°µÄ°æ±¾ Ã²ËÆ²»Ö§³Ö VS2022
+   1.78 ä»¥å‰çš„ç‰ˆæœ¬ è²Œä¼¼ä¸æ”¯æŒ VS2022
 
    https://archives.boost.io/release/1.78.0/source/boost_1_78_0.zip
 
-   ½âÑ¹µ½ D:\boost_1_78_0
+   è§£å‹åˆ° D:\boost_1_78_0
 
-2. ±àÒë
+2. ç¼–è¯‘
 
     ```bash 
-    # powershell ½øÈë boost ½âÑ¹Ä¿Â¼ D:\boost_1_78_0
-    # ÔËĞĞ bootstrap.bat Éú³É b2.exe
+    # powershell è¿›å…¥ boost è§£å‹ç›®å½• D:\boost_1_78_0
+    # è¿è¡Œ bootstrap.bat ç”Ÿæˆ b2.exe
     .\bootstrap.bat
    
-    # ÔËĞĞ b2.exe Éú³É stage\lib
+    # è¿è¡Œ b2.exe ç”Ÿæˆ stage\lib
     .\b2.exe toolset=msvc-14.3 link=static runtime-link=static
     ```
 
-## Win ¹¹½¨±àÒë
+## Win æ„å»ºç¼–è¯‘
 
 ```bash
-# ¹¹½¨vs2022ÏîÄ¿
-# 32Î»
+# æ„å»ºvs2022é¡¹ç›®
+# 32ä½
 cmake -S . -B build -G "Visual Studio 17 2022" -A Win32
-# 64Î»
+# 64ä½
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64
 
-# ±àÒëÉú³É¿âÎÄ¼ş
+# ç¼–è¯‘ç”Ÿæˆåº“æ–‡ä»¶
 cmake --build build --config Release --clean-first
 ```
