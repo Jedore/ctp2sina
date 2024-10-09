@@ -23,7 +23,7 @@ include_directories(${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/.. ${boost_inclu
 link_directories(${boost_lib})
 
 add_library(${mdapi} SHARED ../FtdcMdApiImpl.cpp)
-if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+if(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   target_link_libraries(${mdapi} -lpthread -lboost_system -lboost_thread)
 endif()
 set_target_properties(${mdapi} PROPERTIES OUTPUT_NAME "thostmduserapi_se")
