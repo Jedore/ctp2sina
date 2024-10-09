@@ -11,15 +11,26 @@ for ver in $versions; do
 
 done
 
+echo "################################ build project #################"
 cmake -S. -B build
+
+echo
+echo
+echo "################################ start building #################"
 cmake --build build --config Release --clean-first
+
+echo
+echo
+echo "################################ delete project files #################"
 rm -rf build
 
+echo
+echo
+echo "################################ move library #################"
 for dir in 6.*; do
 if [ -e "$dir/libthostmduserapi_se.so" ]; then
     echo $dir
-    cp $dir/libthostmduserapi_se.so dst/$dir/linux64
-    rm -rf $dir/libthostmduserapi_se.so
+    mv $dir/libthostmduserapi_se.so dst/$dir/linux64
 fi
 done
 
