@@ -1,5 +1,7 @@
 # ctp2sina
 
+**严重参考 https://github.com/openctp/openctp/tree/master/ctp2Sina**
+
 ## 准备
 
 - Window 10
